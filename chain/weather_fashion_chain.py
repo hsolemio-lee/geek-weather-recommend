@@ -33,7 +33,7 @@ def get_fashion_image_chain() -> LLMChain:
         With below image description, give me only url including the following 
         https://image.pollinations.ai/prompt/[description]), where [description] = {region_name},%20[adjective1],%20[charactersDetailed],%20[adjective2],%20[visualStyle1],%20[visualStyle2],%20[visualStyle3],%20[genre],%20[artistReference]
         Description : 
-        I want to get a geek style fashion with below clothes for both woman and man. 
+        I want to get a geek and nerdy style male fashion with below clothes for both woman and man. 
         {fashion_style}
         
         \n{format_instructions}
