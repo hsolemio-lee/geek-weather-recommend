@@ -1,9 +1,14 @@
-from flask import Flask, render_template, request, jsonify
+from dotenv import load_dotenv
 
+load_dotenv()
+
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 from weather_recommendation import recommend_weather
 
-app = Flask(__name__, static_url_path='', static_folder='static')
 
+app = Flask(__name__, static_url_path="", static_folder="static")
+CORS(app)
 
 @app.route("/")
 def index():
@@ -19,7 +24,7 @@ def process():
             "temperature": weather_fashion.temperature,
             "weather": weather_fashion.weather,
             "fashion": weather_fashion.fashion,
-            "image": image_url.url
+            "image": image_url.url,
         }
     )
 
